@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font: 'Merriweather Sans', sans-serif;
+    --white: #f9f7f7;
+
+}
+.hidden{
+    display: none !important;
+}
+.selected{
+    background-color: #dbe2ef50;
+    border-radius: 4px;
+}
+.wrapper{
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#heading{
+    margin: 32px 0 32px 0;
+    font-family: var(--font);
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1.75px;
+    font-weight: 700;
+    color: var(--white);
+}
+#switching-tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0;
+    width: min(550px, 90%) ;
+    height: 28px;
+    font-family: var(--font);
+    font-size: 16px;
+    color: var(--white);
+    letter-spacing: 1.75px;
+}
+#switching-tabs>div{
+    cursor: pointer;
+}
+.tabs-property{
+    padding: 5px 8px;
+    font-size: 14px;
+    letter-spacing: 1.75px;
+}
+#grant-location-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#grant-location-page>img{
+    margin: 32px 0;
+}
+#grant-location-heading{
+    font-family: var(--font);
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 600;
+}
+#grant-location-description{
+    margin: 12px 0 28px 0;
+    font-family: var(--font);
+    font-size: 13.6px;
+    letter-spacing: 0.75px;
+    color: var(--white);
+    font-weight: 100;
+}
+#grant-location-button{
+    padding: 10px 30px;
+    font-family: var(--font);
+    color: var(--white);
+    border: 5px;
+    background-color: #3f72af;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#search-page{
+    display: flex;
+    justify-content: space-between;
+    width: min(550px, 80%);
+    height: 40px;
+    margin: 32px 0;
+}
+#search-page-bar{
+    width: 550px;
+    height: 40px;
+    padding: 0 20px;
+    font-family: var(--font);
+    font-size: 16px;
+    background-color: #dbe2ef50;
+    color: #f9f7f7;
+    border-radius: 10px;
+    border: 0;
+}
+#search-page-bar::placeholder{
+    color:#f9f7f780
+}
+#search-page-icon{
+    border-radius: 100%;
+    background-color: #3f72af;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#loading-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loading-page>img{
+    margin: 32px 0 16px 0;
+}
+#loading-text{
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 400;
+    text-align: center;
+}
+#show-weather-information-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#show-weather-heading{
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-family: var(--font);
+    font-size: 32px;
+    color: #f9f7f7;
+    font-weight: 200;
+}
+#city-flag{
+    object-fit: contain;
+    margin-left: 8px;
+}
+#show-weather-description{
+    font-family: var(--font);
+    font-size: 24px;
+    color: #f9f7f7;
+}
+#show-weather-temperature{
+    font-family: var(--font);
+    font-size: 44px;
+    color: #f9f7f7;
+    margin-bottom: 32px;
+}
+.show-weather-cards-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show-weather-card{
+    padding: 16px;
+    width: 200px;
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 24px;
+    color: #f9f7f7;
+    background-color: #dbe2ef90;
+    font-weight: 100;
+    border-radius: 5px;
+    margin: 0 10px;
+    margin-bottom: 32px;
+}
+.show-weather-card-heading{
+    margin: 5px 0;
+}
+#city-not-found > p{
+    font-family: var(--font);
+    font-size: 16px;
+    text-align: center;
+    color: var(--white);
+}
+#error{
+    font-family: var(--font);
+    text-align: center;
+}
+#error>p{
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+#error-retry{
+    padding: 10px 30px;
+    font-size: 13.6px;
+    border-radius: 5px;
+}
+
+@media (max-width:768px) {
+    #heading{
+        font-size: 28px;
+    }
+    #switching-tabs{
+        margin: 0;
+    }
+    .tabs-property{
+        font-size: 12px;
+    }
+    .show-weather-cards-section{
+        flex-direction: column;
+        align-items: center;
+    }
+}

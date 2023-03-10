@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - App</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Heading -->
+        <div id="heading">WEATHER APP</div>
+
+        <!-- Switching Tabs -->
+        <div id="switching-tabs">
+            <div class="tabs-property selected" id="your-weather-section">
+                <p>Your Weather</p>
+            </div>
+            <div class="tabs-property" id="search-weather-section">
+                <p>Search Weather</p>
+            </div>
+        </div>
+
+        <!-- Grant Location Page -->
+        <div class="hidden" id="grant-location-page">
+            <img src="assets/location.png" width="80" height="80">
+            <p id="grant-location-heading">Grant Location Access</p>
+            <p id="grant-location-description">Allow Access To Get Weather Information</p>
+            <button id="grant-location-button">
+                GRANT ACCESS
+            </button>
+        </div>
+
+        <!-- Search Page -->
+        <div class="hidden" id="search-page">
+            <input type="text" placeholder="Search for city..." id="search-page-bar">
+            <div id="search-page-icon">
+                <img src="assets/search-icon.png" width="20" height="20">
+            </div>
+        </div>
+
+        <!-- Loading Page -->
+        <div class="hidden" id="loading-page">
+            <img src="assets/loading.gif" width="150" height="150">
+            <p id="loading-text">LOADING</p>
+        </div>
+
+        <!-- Weather Page -->
+        <div class="" id="show-weather-information-page">
+            <div id="show-weather-heading">
+                <p id="city-name">NULL</p> <p> </p>
+                <img src="" id="city-flag" width="30" height="30">
+            </div>
+            <p id="show-weather-description">NULL</p>
+            <img src="" id="show-weather-icon" width="90" height="90">
+            <p id="show-weather-temperature"><span id="show-weather-temperature-value"></span>°C</p>
+
+            <!-- More info cards -->
+            <div class="show-weather-cards-section">
+                <div class="show-weather-card">
+                    <img src="assets/wind-icon.png" height="50" width="50">
+                    <p class="show-weather-card-heading">WINDSPEED</p>
+                    <p id="show-weather-windspeed"><span id="show-weather-windspeed-value"></span>m/s</p>
+                </div>
+                <div class="show-weather-card">
+                    <img src="assets/humidity-icon.png" height="50" width="50">
+                    <p class="show-weather-card-heading">HUMIDITY</p>
+                    <p id="show-weather-humidity"><span id="show-weather-humidity-value"></span>%</p>
+                </div>
+                <div class="show-weather-card">
+                    <img src="assets/cloud-icon.png" height="50" width="50">
+                    <p class="show-weather-card-heading">CLOUDS</p>
+                    <p id="show-weather-clouds"><span id="show-weather-clouds-value"></span>%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- City Not Found Page -->
+        <div class="hidden" id="city-not-found">
+            <img src="assets/error.png" width="300">
+            <p>City Not Found</p>
+        </div>
+
+        <!-- Failed To Fetch -->
+        <div class="hidden" id="error">
+            <p>Error: Failed to fetch</p>
+            <div id="error-retry">
+                RETRY
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
